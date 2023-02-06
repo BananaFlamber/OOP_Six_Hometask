@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Добро пожаловать в игру!");
         System.out.println("...описание...");
 
+        RobotMapFactory robotMapFactory = new RobotMapFactory();
         RobotMap map;
         while (true) {
             System.out.println("Для создания карты введите 2 положительных числа через пробел");
@@ -19,7 +20,7 @@ public class Main {
                 int m = userInput.nextInt();
                 userInput.nextLine();
 
-                map = new RobotMap(n, m);
+                map = (RobotMap) RobotMapFactory.create(m, n);
                 break;
             } catch (InputMismatchException e) {
                 System.err.println("Возникла ошибка при создании карты: " + e.getMessage());

@@ -75,7 +75,7 @@ public class RobotMap implements InterfaceRobotMap {
     }
 
 
-    public class Robot {
+    public class Robot implements InterfaceRobot{
 
 
         public static final Direction DEFAULT_DIRECTION = Direction.TOP;
